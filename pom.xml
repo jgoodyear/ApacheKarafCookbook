@@ -12,6 +12,17 @@
 
   <name>Apache Karaf Cookbook Parent Pom</name>
 
+  <prerequisites>
+    <maven>3.0.5</maven>
+  </prerequisites>
+
+  <scm>
+    <url>https://github.com/jgoodyear/ApacheKarafCookbook</url>
+    <connection>scm:git:git@github.com:jgoodyear/ApacheKarafCookbook.git</connection>
+    <developerConnection>scm:git:git@github.com:jgoodyear/ApacheKarafCookbook.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
   <modules>
     <module>chapter1</module>
     <module>chapter2</module>
