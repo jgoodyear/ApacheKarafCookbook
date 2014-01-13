@@ -7,24 +7,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>apache-karaf-cookbook</artifactId>
+        <artifactId>chapter1</artifactId>
         <groupId>com.packt</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chapter1</artifactId>
+    <artifactId>recipe5</artifactId>
     <packaging>pom</packaging>
 
-    <name>Chapter 1 :: Apache Karaf for Systems Builders</name>
-    <description>Contains sample code and configurations.</description>
-
-    <modules>
-      <module>recipe1</module>
-      <module>recipe2</module>
-      <module>recipe3</module>
-      <module>recipe4</module>
-      <module>recipe5</module>
-      <module>recipe6</module>
-    </modules>
+    <name>Chapter 1 :: Recipe 5 :: </name>
 
 </project>
