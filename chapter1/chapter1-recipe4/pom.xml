@@ -12,9 +12,9 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>recipe3</artifactId>
+    <artifactId>chapter1-recipe4</artifactId>
     <packaging>pom</packaging>
 
-    <name>Chapter 1 :: Recipe 3 :: </name>
+    <name>Chapter 1 :: Recipe 4 :: </name>
 
 </project>

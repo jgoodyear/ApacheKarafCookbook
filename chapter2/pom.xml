@@ -18,4 +18,13 @@
     <name>Chapter 2 :: Making smart routers with Apache Camel</name>
     <description>Contains sample code and configurations.</description>
 
+    <modules>
+      <module>chapter2-recipe1</module>
+      <module>chapter2-recipe2</module>
+      <module>chapter2-recipe3</module>
+      <module>chapter2-recipe4</module>
+      <module>chapter2-recipe5</module>
+      <module>chapter2-recipe6</module>
+    </modules>
+
 </project>

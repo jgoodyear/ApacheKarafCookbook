@@ -19,12 +19,12 @@
     <description>Contains sample code and configurations.</description>
 
     <modules>
-      <module>recipe1</module>
-      <module>recipe2</module>
-      <module>recipe3</module>
-      <module>recipe4</module>
-      <module>recipe5</module>
-      <module>recipe6</module>
+      <module>chapter1-recipe1</module>
+      <module>chapter1-recipe2</module>
+      <module>chapter1-recipe3</module>
+      <module>chapter1-recipe4</module>
+      <module>chapter1-recipe5</module>
+      <module>chapter1-recipe6</module>
     </modules>
 
 </project>
