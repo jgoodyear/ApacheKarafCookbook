@@ -30,7 +30,7 @@
     <artifactId>command</artifactId>
     <packaging>bundle</packaging>
     <version>1.0.0-SNAPSHOT</version>
-    <name>Apache Karaf :: Shell cookbook/sample Commands</name>
+    <name>Chapter 1 :: Recipe 2 :: sample command</name>
 
     <description>Provides the OSGi cookbook commands</description>
 
