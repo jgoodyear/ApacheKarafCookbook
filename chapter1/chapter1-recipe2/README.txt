@@ -2,6 +2,9 @@
  Making a custom Apache Karaf command.
  =====================================
 
+ WARNING: Apache Karaf 3.0.0 has a custom command bug out
+ of the box. This should be resolved for 3.0.1 release.
+
  The below Maven Archetype will generate a project structure
  for the development of an Apache Karaf command. You should
  select the archetypeVersion to match the Karaf version.
