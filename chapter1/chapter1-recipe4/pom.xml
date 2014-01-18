@@ -17,4 +17,11 @@
 
     <name>Chapter 1 :: Recipe 4 :: </name>
 
+    <modules>
+      <module>moduleA</module>
+      <module>moduleB</module>
+      <!-- Keep features for last -->
+      <module>feature</module>
+    </modules>
+
 </project>

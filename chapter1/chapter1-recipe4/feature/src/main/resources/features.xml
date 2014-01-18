@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<features>
+
+    <feature name='moduleA' version='${project.version}'>
+        <bundle>mvn:com.packt/moduleA/${project.version}</bundle>
+    </feature>
+
+    <feature name='moduleB' version='${project.version}'>
+        <bundle>mvn:com.packt/moduleB/${project.version}</bundle>
+    </feature>
+
+    <feature name='recipe4-all-modules' version='${project.version}'>
+        <feature version='${project.version}'>moduleA</feature>
+        <feature version='${project.version}'>moduleB</feature>
+    </feature>
+
+</features>
