@@ -49,6 +49,15 @@ Define value for property 'scope': : cookbook
 
  Sample invocation in Karaf
  --------------------------
+ 
+ karaf@root()> cookbook:sample -o 4 test
+ Executing command sample
+ Option: 4
+ Argument: test
+ karaf@root()
+
+ Sample invocation without specifying scope
+ ------------------------------------------
 
  karaf@root()> sample -o 4 test
  Executing command sample
