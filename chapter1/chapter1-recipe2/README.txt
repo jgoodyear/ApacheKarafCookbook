@@ -39,3 +39,19 @@ Define value for property 'scope': : cookbook
   -DartifactId=command \
   -Dversion=1.0.0-SNAPSHOT \ 
   -Dpackage=com.packt
+
+ Sample installation of Bundle into Karaf
+ ----------------------------------------
+ 
+ karaf@root()> install mvn:com.packt.chapter1/command
+ Bundle ID: 88
+ karaf@root()>
+
+ Sample invocation in Karaf
+ --------------------------
+
+ karaf@root()> sample -o 4 test
+ Executing command sample
+ Option: 4
+ Argument: test
+ karaf@root()>
