@@ -18,4 +18,10 @@
     <name>Chapter 3 :: Deploying a Message Broker with Apache ActiveMQ</name>
     <description>Contains sample code and configurations.</description>
 
+    <modules>
+        <module>chapter3-recipe1</module>
+        <module>chapter3-recipe2</module>
+        <module>chapter3-recipe3</module>
+    </modules>
+
 </project>
