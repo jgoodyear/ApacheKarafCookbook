@@ -19,10 +19,22 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <osgi-core-version>5.0.0</osgi-core-version>
+    <osgi-compendium-version>5.0.0</osgi-compendium-version>
     <camel.version>2.12.2</camel.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <version>${osgi-core-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.compendium</artifactId>
+      <version>${osgi-compendium-version}</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-core</artifactId>
@@ -91,7 +103,7 @@
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.3.7</version>
+        <version>2.4.0</version>
         <extensions>true</extensions>
         <configuration>
           <instructions>
@@ -99,16 +111,6 @@
             <Private-Package>com.packt.*</Private-Package>
             <Import-Package>*</Import-Package>
           </instructions>
-        </configuration>
-      </plugin>
-
-       <!-- to run the example using mvn camel:run -->
-      <plugin>
-        <groupId>org.apache.camel</groupId>
-        <artifactId>camel-maven-plugin</artifactId>
-        <version>${camel.version}</version>
-        <configuration>
-          <useBlueprint>true</useBlueprint>
         </configuration>
       </plugin>
 
