@@ -25,6 +25,8 @@ Each file should contain content as below:
 HELLO_GREETING=hello
 HELLO_NAME=jamie
 
+See sample/etc folder for samples.
+
 A route will be instantiated for each configuration provided.
 
 Executing camel:route-list will display each configured instance 
