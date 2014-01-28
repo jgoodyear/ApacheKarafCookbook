@@ -27,6 +27,16 @@ HELLO_NAME=jamie
 
 A route will be instantiated for each configuration provided.
 
+Executing camel:route-list will display each configured instance 
+of the Hello route. 
+
+ karaf@root()> camel:route-list 
+  Context        Route          Status   
+  -------        -----          ------   
+  helloContext   Hello jamie    Started  
+  helloContext   Hello laura    Started  
+ karaf@root()> 
+
 For more help see the Apache Camel documentation
 
     http://camel.apache.org/

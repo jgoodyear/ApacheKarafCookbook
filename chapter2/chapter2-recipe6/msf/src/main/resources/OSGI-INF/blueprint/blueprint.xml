@@ -13,19 +13,7 @@
       </cm:default-properties>
   </cm:property-placeholder>
 
-  <bean id="helloBean" class="com.packt.HelloBean">
-      <property name="say" value="Hi from Camel"/>
-  </bean>
-
   <camelContext id="helloContext" xmlns="http://camel.apache.org/schema/blueprint" autoStartup="true">
-    <route id="timerToLog">
-      <from uri="timer:foo?period=5000"/>
-      <setBody>
-          <method ref="helloBean" method="hello"/>
-      </setBody>
-      <log message="The message contains ${body}"/>
-      <to uri="mock:result"/>
-    </route>
   </camelContext>
 
   <bean id="apacheKarafCookbook" class="com.packt.HelloFactory" init-method="init" destroy-method="destroy">

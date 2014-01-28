@@ -1,6 +1,9 @@
 package com.packt;
 
+import java.util.Collections;
 import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.camel.CamelContext;
@@ -26,7 +29,8 @@ public class HelloFactory implements ManagedServiceFactory {
    private ServiceTracker tracker;
    private Logger log = LoggerFactory.getLogger(HelloFactory.class);
    private String configurationPid;
-
+   private Map<String, HelloDispatcher> dispatchEngines = Collections.synchronizedMap(new HashMap<String, HelloDispatcher>());
+    
    /**
     * Override ManagedServiceFactory interfaces.
     */
@@ -37,9 +41,19 @@ public class HelloFactory implements ManagedServiceFactory {
    }
 
    @Override
-   public void updated(String id, Dictionary dict) throws ConfigurationException { 
-       log.info("updated " + id + " with " + dict.toString());
+   public void updated(String pid, Dictionary dict) throws ConfigurationException { 
+       log.info("updated " + pid + " with " + dict.toString());
+       HelloDispatcher engine = null;
 
+       if (dispatchEngines.containsKey(pid)) {
+           engine = dispatchEngines.get(pid);
+
+           if (engine != null) {
+               destroyEngine(engine);
+           }
+           dispatchEngines.remove(pid);
+       }
+  
        //Verify dictionary contents before applying them to Hello
        if (dict.get(HelloConstants.HELLO_GREETING) != null && 
            !StringUtils.isEmpty(dict.get(HelloConstants.HELLO_GREETING).toString())) {
@@ -55,16 +69,40 @@ public class HelloFactory implements ManagedServiceFactory {
            throw new IllegalArgumentException("Missing HELLO_NAME");
        }
 
+       //Configuration was verified above, now create engine.
+       engine = new HelloDispatcher();
+       engine.setCamelContext(camelContext);
+       engine.setGreeting(dict.get(HelloConstants.HELLO_GREETING).toString());
+       engine.setName(dict.get(HelloConstants.HELLO_NAME).toString());
+       
+       dispatchEngines.put(pid, engine);
+       log.debug("Start the engine...");
+       if (engine == null) {
+           log.debug("Engine was null, check configuration.");
+       }
+       engine.start();
    }
  
    @Override
-   public void deleted(String id) {
-       log.info("deleted " + id);
+   public void deleted(String pid) {
+       if (dispatchEngines.containsKey(pid)) {
+           HelloDispatcher engine = dispatchEngines.get(pid);
+
+           if (engine != null) {
+               destroyEngine(engine);
+           }
+           dispatchEngines.remove(pid);
+       }
+       log.info("deleted " + pid);
    }
 
    /**
     * Adding our own methods.
     */
+
+   private void destroyEngine(HelloDispatcher engine) {
+       engine.stop();
+   }
 
    // We wire the init method in the blueprint file
    public void init() {
@@ -84,14 +122,17 @@ public class HelloFactory implements ManagedServiceFactory {
        tracker.close();
    }
 
+   // Wired in blueprint.
    public void setConfigurationPid(String configurationPid) {
        this.configurationPid = configurationPid;
    }
 
+   // Wired in blueprint.
    public void setBundleContext(BundleContext bundleContext) {
        this.bundleContext = bundleContext;
    }
 
+   // Wired in blueprint.
    public void setCamelContext(CamelContext camelContext) {
        this.camelContext = camelContext;
    }
