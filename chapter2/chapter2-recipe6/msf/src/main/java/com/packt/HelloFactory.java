@@ -33,25 +33,24 @@ public class HelloFactory implements ManagedServiceFactory {
  
    @Override
    public String getName() {
-       System.out.println("Getting Factory Name... " + configurationPid);
        return configurationPid;
    }
 
    @Override
    public void updated(String id, Dictionary dict) throws ConfigurationException { 
-       System.out.println("updated " + id + " with " + dict.toString());
+       log.info("updated " + id + " with " + dict.toString());
 
        //Verify dictionary contents before applying them to Hello
        if (dict.get(HelloConstants.HELLO_GREETING) != null && 
            !StringUtils.isEmpty(dict.get(HelloConstants.HELLO_GREETING).toString())) {
-           log.debug("HELLO_GREETING set to " + dict.get(HelloConstants.HELLO_GREETING));
+           log.info("HELLO_GREETING set to " + dict.get(HelloConstants.HELLO_GREETING));
        } else {
            throw new IllegalArgumentException("Missing HELLO_GREETING");
        }
 
        if (dict.get(HelloConstants.HELLO_NAME) != null &&
            !StringUtils.isEmpty(dict.get(HelloConstants.HELLO_NAME).toString())) {
-           log.debug("HELLO_NAME set to " + dict.get(HelloConstants.HELLO_NAME));
+           log.info("HELLO_NAME set to " + dict.get(HelloConstants.HELLO_NAME));
        } else {
            throw new IllegalArgumentException("Missing HELLO_NAME");
        }
@@ -60,7 +59,7 @@ public class HelloFactory implements ManagedServiceFactory {
  
    @Override
    public void deleted(String id) {
-       System.out.println("deleted " + id);
+       log.info("deleted " + id);
    }
 
    /**
@@ -80,7 +79,7 @@ public class HelloFactory implements ManagedServiceFactory {
 
    // We wire the destroy method in the blueprint file
    public void destroy() {
-       System.out.println("Destroying hello factory " + configurationPid);
+       log.info("Destroying hello factory " + configurationPid);
        registration.unregister();
        tracker.close();
    }

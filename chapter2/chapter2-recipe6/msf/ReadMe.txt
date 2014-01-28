@@ -18,6 +18,15 @@ or Apache Karaf. You can run the following command from its shell:
 
     osgi:install -s mvn:com.packt/msf/1.0.0-SNAPSHOT
 
+Configuration of the MSF should reside in KARAF_BASE/etc. Create a pair
+of files com.packt.hellofactory-test1.cfg and com.packt.hellofactory-test2.cfg.
+Each file should contain content as below:
+
+HELLO_GREETING=hello
+HELLO_NAME=jamie
+
+A route will be instantiated for each configuration provided.
+
 For more help see the Apache Camel documentation
 
     http://camel.apache.org/

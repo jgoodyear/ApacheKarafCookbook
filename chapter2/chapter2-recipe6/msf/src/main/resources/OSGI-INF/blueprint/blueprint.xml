@@ -17,7 +17,7 @@
       <property name="say" value="Hi from Camel"/>
   </bean>
 
-  <camelContext id="helloContext" trace="false" xmlns="http://camel.apache.org/schema/blueprint">
+  <camelContext id="helloContext" xmlns="http://camel.apache.org/schema/blueprint" autoStartup="true">
     <route id="timerToLog">
       <from uri="timer:foo?period=5000"/>
       <setBody>
