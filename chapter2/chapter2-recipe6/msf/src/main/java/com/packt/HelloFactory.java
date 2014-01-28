@@ -5,6 +5,8 @@ import java.util.Properties;
 
 import org.apache.camel.CamelContext;
 
+import org.apache.commons.lang.StringUtils;
+
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceRegistration;
@@ -36,8 +38,24 @@ public class HelloFactory implements ManagedServiceFactory {
    }
 
    @Override
-   public void updated(String id, Dictionary dict) {
+   public void updated(String id, Dictionary dict) throws ConfigurationException { 
        System.out.println("updated " + id + " with " + dict.toString());
+
+       //Verify dictionary contents before applying them to Hello
+       if (dict.get(HelloConstants.HELLO_GREETING) != null && 
+           !StringUtils.isEmpty(dict.get(HelloConstants.HELLO_GREETING).toString())) {
+           log.debug("HELLO_GREETING set to " + dict.get(HelloConstants.HELLO_GREETING));
+       } else {
+           throw new IllegalArgumentException("Missing HELLO_GREETING");
+       }
+
+       if (dict.get(HelloConstants.HELLO_NAME) != null &&
+           !StringUtils.isEmpty(dict.get(HelloConstants.HELLO_NAME).toString())) {
+           log.debug("HELLO_NAME set to " + dict.get(HelloConstants.HELLO_NAME));
+       } else {
+           throw new IllegalArgumentException("Missing HELLO_NAME");
+       }
+
    }
  
    @Override
@@ -49,6 +67,7 @@ public class HelloFactory implements ManagedServiceFactory {
     * Adding our own methods.
     */
 
+   // We wire the init method in the blueprint file
    public void init() {
        log.info("Starting " + this.getName());
        Dictionary servProps = new Properties();
@@ -59,6 +78,7 @@ public class HelloFactory implements ManagedServiceFactory {
        log.info("Started " + this.getName());
    }
 
+   // We wire the destroy method in the blueprint file
    public void destroy() {
        System.out.println("Destroying hello factory " + configurationPid);
        registration.unregister();

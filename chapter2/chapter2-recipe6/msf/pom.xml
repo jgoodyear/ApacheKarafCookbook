@@ -22,9 +22,11 @@
     <osgi-core-version>5.0.0</osgi-core-version>
     <osgi-compendium-version>5.0.0</osgi-compendium-version>
     <camel.version>2.12.2</camel.version>
+    <commons.version>2.6</commons.version>
   </properties>
 
   <dependencies>
+    <!-- OSGi -->
     <dependency>
       <groupId>org.osgi</groupId>
       <artifactId>org.osgi.core</artifactId>
@@ -35,6 +37,8 @@
       <artifactId>org.osgi.compendium</artifactId>
       <version>${osgi-compendium-version}</version>
     </dependency>
+
+    <!-- Apache Camel --> 
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-core</artifactId>
@@ -45,6 +49,14 @@
       <artifactId>camel-blueprint</artifactId>
       <version>${camel.version}</version>
     </dependency>
+
+    <!-- Commons -->
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>${commons.version}</version>
+    </dependency>
+            
 
     <!-- logging -->
     <dependency>
