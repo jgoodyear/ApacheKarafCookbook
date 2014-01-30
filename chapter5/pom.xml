@@ -21,5 +21,6 @@
     <modules>
     	<module>chapter5-recipe2</module>
     	<module>chapter5-recipe3</module>
+    	<module>chapter5-recipe4</module>
     </modules>
 </project>
