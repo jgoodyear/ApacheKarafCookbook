@@ -61,4 +61,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<name>Chapter 5 :: Recipe 4 :: Blueprint</name>
 </project>

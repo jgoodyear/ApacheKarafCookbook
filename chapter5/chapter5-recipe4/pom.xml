@@ -13,4 +13,5 @@
 		<module>chapter5-recipe4-whiteboard</module>
 		<module>chapter5-recipe4-blueprint</module>
 	</modules>
+	<name>Chapter 5 :: Recipe 4 ::</name>
 </project>

@@ -56,4 +56,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<name>Chapter 5 :: Recipe 3 ::</name>
 </project>
