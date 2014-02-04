@@ -11,4 +11,5 @@
     <packaging>pom</packaging>
 
     <name>Chapter 5 :: Recipe 2 :: </name>
+    <description>Configuration of Pax Web</description>
 </project>

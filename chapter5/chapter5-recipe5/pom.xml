@@ -48,4 +48,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<description>Web Application Bundle (WAB)</description>
 </project>

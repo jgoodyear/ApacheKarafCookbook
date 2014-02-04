@@ -64,4 +64,5 @@
 		</plugins>
 	</build>
 	<name>Chapter 5 :: Recipe 4 :: Whiteboard</name>
+	<description>Using the whiteboard extender only.</description>
 </project>

@@ -6,7 +6,7 @@
 		<artifactId>chapter5</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe6</artifactId>
+	<artifactId>chapter5-recipe8</artifactId>
 	<packaging>bundle</packaging>
 
 	<dependencies>
@@ -47,4 +47,6 @@
 		</plugins>
 	</build>
 
+	<name>Chapter 5 :: Recipe 8 ::</name>
+	<description>Annotation only web application bundle</description>
 </project>

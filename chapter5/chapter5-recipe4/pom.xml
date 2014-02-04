@@ -14,4 +14,5 @@
 		<module>chapter5-recipe4-blueprint</module>
 	</modules>
 	<name>Chapter 5 :: Recipe 4 ::</name>
+	<description>Using the whiteboard extender</description>
 </project>

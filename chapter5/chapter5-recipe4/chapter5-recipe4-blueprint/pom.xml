@@ -62,4 +62,5 @@
 		</plugins>
 	</build>
 	<name>Chapter 5 :: Recipe 4 :: Blueprint</name>
+	<description>Using the whiteboard extender with blueprint.</description>
 </project>
