@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.packt</groupId>
+    <artifactId>chapter5</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>chapter5-recipe7</artifactId>
+  <name>Chapter 5 :: Recipe 7 ::</name>
+  <description>Http connector specific application</description>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>chapter5-recipe7-manifest</module>
+  	<module>chapter5-recipe7-whiteboard</module>
+  </modules>
+</project>
