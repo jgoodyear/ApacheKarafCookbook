@@ -28,8 +28,8 @@ public class Activator implements BundleActivator, ServiceTrackerCustomizer<Http
 	 */
 	public void start(BundleContext bc) throws Exception {
 		bundleContext = bc;
-		//starts the Service Tracker for the HTTP Service
-		tracker = new ServiceTracker<HttpService, HttpService>(bc, HttpService.class, this);
+		tracker = 
+				new ServiceTracker<HttpService, HttpService>(bc, HttpService.class, this);
 		tracker.open();
 	}
 
@@ -56,7 +56,6 @@ public class Activator implements BundleActivator, ServiceTrackerCustomizer<Http
 			final Dictionary<String, Object> initParams = new Hashtable<String, Object>();
 			try {
 				httpService.registerServlet("/hello", new HelloServlet(), initParams, httpContext);
-				
 				httpService.registerServlet("/hello/logo", new HelloImage(), initParams, httpContext);
 				httpService.registerResources("/images", "/images", httpContext);
 			} catch (ServletException e) {
