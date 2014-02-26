@@ -17,17 +17,17 @@
 
 	<servlet-mapping>
 		<servlet-name>test-jsp</servlet-name>
-		<url-pattern>/subjsp</url-pattern>
+		<url-pattern>/secured/subjsp</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>hello.servlet</servlet-name>
-		<url-pattern>/example</url-pattern>
+		<url-pattern>/secured</url-pattern>
 	</servlet-mapping>
 
 	<filter-mapping>
 		<filter-name>filter</filter-name>
-		<url-pattern>/example/*</url-pattern>
+		<url-pattern>/secured/*</url-pattern>
 	</filter-mapping>
 
 	<error-page>
@@ -44,7 +44,7 @@
 		<web-resource-collection>
 			<web-resource-name>Protected Area</web-resource-name>
 			<description>Protect the Example Servlet</description>
-			<url-pattern>/example/*</url-pattern>
+			<url-pattern>/secured/*</url-pattern>
 			<http-method>GET</http-method>
 			<http-method>POST</http-method>
 		</web-resource-collection>
@@ -58,7 +58,7 @@
 		<realm-name>default</realm-name>
 	</login-config>
 	<security-role>
-		<description>Test Role</description>
+		<description>Administration</description>
 		<role-name>admin</role-name>
 	</security-role>
 </web-app>

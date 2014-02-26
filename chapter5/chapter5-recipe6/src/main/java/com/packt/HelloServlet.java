@@ -23,7 +23,9 @@ public class HelloServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<body>");
-		out.println("<h1>Hello Servlet Get</h1>");
+		out.println("<h1>Hello Servlet with Authentication: </h1>");
+		out.println("User: "+request.getUserPrincipal().getName()+" </br>");
+		out.println("and is in role Admin: "+request.isUserInRole("admin")+"</br>");
 		out.println("</body>");
 		out.println("</html>");
 	}
