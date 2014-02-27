@@ -10,8 +10,8 @@
       <property name="say" value="Hi from Camel"/>
   </bean>
 
-  <camelContext id="blueprintContext" trace="false" xmlns="http://camel.apache.org/schema/blueprint">
-    <route id="timerToLog">
+  <camelContext id="CamelCommandContext" trace="false" xmlns="http://camel.apache.org/schema/blueprint">
+    <route id="CamelRoute-timerToLog">
       <from uri="timer:foo?period=5000"/>
       <setBody>
           <method ref="helloBean" method="hello"/>
