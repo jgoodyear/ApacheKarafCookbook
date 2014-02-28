@@ -7,23 +7,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>apache-karaf-cookbook</artifactId>
+        <artifactId>chapter7</artifactId>
         <groupId>com.packt</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chapter7</artifactId>
+    <artifactId>chapter7-recipe1</artifactId>
     <packaging>pom</packaging>
 
-    <name>Chapter 7 :: Providing a persistence layer with Apache Aries and OpenJPA</name>
-    <description>Contains sample code and configurations.</description>
-
-
-    <modules>
-        <module>chapter7-recipe1</module>
-        <module>chapter7-recipe2</module>
-        <module>chapter7-recipe3</module>
-        <module>chapter7-recipe4</module>
-    </modules>
+    <name>Chapter 7 :: Recipe 1 :: </name>
 
 </project>
