@@ -12,5 +12,6 @@
   <modules>
   	<module>chapter5-recipe7-manifest</module>
   	<module>chapter5-recipe7-whiteboard</module>
+  	<module>chapter5-recipe7-jettyweb</module>
   </modules>
 </project>
