@@ -3,16 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter5</artifactId>
+		<artifactId>chapter4</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe8</artifactId>
+	<artifactId>chapter4-recipe9</artifactId>
 	<packaging>pom</packaging>
 
 
-	<name>Chapter 5 :: Recipe 8 ::</name>
+	<name>Chapter 4 :: Recipe 9 ::</name>
 	<modules>
-		<module>chapter5-recipe8-servlet3</module>
-		<module>chapter5-recipe8-annotated</module>
+		<module>chapter4-recipe9-servlet3</module>
+		<module>chapter4-recipe9-annotated</module>
 	</modules>
 </project>

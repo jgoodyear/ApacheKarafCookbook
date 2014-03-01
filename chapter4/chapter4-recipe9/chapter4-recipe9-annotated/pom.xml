@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter5-recipe8</artifactId>
+		<artifactId>chapter4-recipe9</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe8-annotated</artifactId>
+	<artifactId>chapter4-recipe9-annotated</artifactId>
 	<packaging>bundle</packaging>
-	<description>Annotation only web application bundle</description>
+	<description>Build a Servlet 3.0 annotated web application with Apache Karaf - Annotation only web application bundle</description>
 
 	<dependencies>
 		<!-- Provided dependencies -->
