@@ -7,11 +7,11 @@ public class Activator implements BundleActivator {
 
 
     public void start(BundleContext context) throws Exception {
-        System.out.println("JPA-JTA Demo Bundle starting...");
+        System.out.println("JPA-Only Demo Bundle starting...");
     }
 
     public void stop(BundleContext context) throws Exception {
-        System.out.println("JPA-JTA Demo Bundle stopping...");
+        System.out.println("JPA-Only Demo Bundle stopping...");
     }
 
 }
