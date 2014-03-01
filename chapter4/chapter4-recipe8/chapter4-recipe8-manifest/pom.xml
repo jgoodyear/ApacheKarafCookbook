@@ -3,14 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter5-recipe7</artifactId>
+		<artifactId>chapter4-recipe8</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe7-whiteboard</artifactId>
-	<name>Chapter 5 :: Recipe 7 :: Whiteboard</name>
+	<artifactId>chapter4-recipe8-manifest</artifactId>
 	<packaging>bundle</packaging>
+	<description>Bind a web project to a specific host in Apache Karaf - Regular WAB with Manifest entry <description>
+	<name>Chapter 4 :: Recipe 8 :: Manifest</name>
 
 	<dependencies>
+		<!-- Provided dependencies -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -29,12 +31,6 @@
 			<scope>provided</scope>
 			<version>4.3.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.web</groupId>
-			<artifactId>pax-web-extender-whiteboard</artifactId>
-			<version>3.0.6</version>
-			<scope>provided</scope>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -42,15 +38,14 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.4.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-Activator>com.packt.internal.Activator</Bundle-Activator>
-						<Import-Package>
-							org.osgi.framework;version="[1.0.0,2.0.0)",
-							org.osgi.service.http;version="[1.0.0,2.0.0)",
-							*
-						</Import-Package>
+						<_wab>src/main/webapp</_wab>
+						<Web-ContextPath>packt-sample</Web-ContextPath>
+						<Web-Connectors>alternateConnector</Web-Connectors>
+						<Web-VirtualHosts>localhost</Web-VirtualHosts>
 					</instructions>
 				</configuration>
 			</plugin>
