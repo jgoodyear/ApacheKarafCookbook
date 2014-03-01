@@ -3,11 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter5</artifactId>
+		<artifactId>chapter4</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe3</artifactId>
+	<artifactId>chapter4-recipe3</artifactId>
 	<packaging>bundle</packaging>
+	<name>Chapter 4 :: Recipe 3 ::</name>
+	<description>Build a Http-Service project for hosting in Apache Karaf</description>
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -56,6 +58,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<name>Chapter 5 :: Recipe 3 ::</name>
-	<description>Using HTTP-Service</description>
 </project>
