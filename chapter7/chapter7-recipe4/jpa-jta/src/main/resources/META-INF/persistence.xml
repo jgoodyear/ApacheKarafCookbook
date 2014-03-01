@@ -1,0 +1,34 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="1.0">
+
+   <persistence-unit name="recipe" transaction-type="JTA">
+
+      <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+
+      <jta-data-source>osgi:service/javax.sql.XADataSource/(osgi.jndi.service.name=jdbc/demoxa)</jta-data-source>
+      <non-jta-data-source>osgi:service/javax.sql.DataSource/(transactional=false)</non-jta-data-source>
+
+      <class>com.packt.jpa.demo.entity.Book</class>
+      <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+
+      <properties>
+         <!-- Database Properties -->
+         <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver.class"/>
+         <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/demo;create=true"/>
+         <!-- OpenJPA Properties -->
+         <property name="openjpa.Multithreaded" value="true"/>
+         <property name="openjpa.TransactionMode" value="managed"/>
+         <property name="openjpa.ConnectionFactoryMode" value="managed"/>
+         <property name="openjpa.LockManager" value="pessimistic(VersionCheckOnReadLock=true,VersionUpdateOnWriteLock=true)"/>
+         <property name="openjpa.LockTimeout" value="30000"/>
+         <property name="openjpa.jdbc.MappingDefaults" value="ForeignKeyDeleteAction=restrict, JoinForeignKeyDeleteAction=restrict"/>
+         <property name="openjpa.LockManager" value="pessimistic(VersionCheckOnReadLock=true,VersionUpdateOnWriteLock=true)"/>
+         <property name="openjpa.Log" value="DefaultLevel=INFO, Runtime=INFO, Tool=INFO, SQL=INFO"/>
+         <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema"/>
+         <property name="openjpa.jdbc.DBDictionary" value="derby"/>
+      </properties>
+   </persistence-unit>
+
+</persistence>

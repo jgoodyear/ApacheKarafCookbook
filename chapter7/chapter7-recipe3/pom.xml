@@ -17,4 +17,8 @@
 
     <name>Chapter 7 :: Recipe 3 :: </name>
 
+    <modules>
+        <module>jpa-only</module>
+    </modules>
+
 </project>
