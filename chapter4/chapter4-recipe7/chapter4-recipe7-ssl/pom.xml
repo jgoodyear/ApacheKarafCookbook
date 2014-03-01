@@ -3,12 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter5-recipe6</artifactId>
+		<artifactId>chapter4-recipe7</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe6-auth</artifactId>
-	<packaging>bundle</packaging>
-	<name>Chapter 5 :: Recipe 6 :: Auth</name>
+	<artifactId>chapter4-recipe7-ssl</artifactId>
 
 	<dependencies>
 		<!-- Provided dependencies -->
@@ -48,5 +46,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<description>The recipe for authentication</description>
 </project>
