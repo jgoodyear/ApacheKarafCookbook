@@ -5,16 +5,12 @@ Samples for Packt Publishing's Apache Karaf Cookbook.
 
 The samples in this project were written with JDK 1.7 and Maven 3.0.5.
 
-Project Layout:
----------------
-
- Parent Pom
- Chapter Number
-  Recipe Name
-  Recipe Name
- Chapter Number
-  Recipe Name
-  Recipe Name
- ...
- ...
-
+1. Apache Karaf for system builders.
+2. Making a Smart Router with Apache Camel. (Sample Chapter) 
+3. Deploying a Message Broker with Apache ActiveMQ. 
+4. Hosting web services with Apache CXF.  
+5. Hosting a JSP with Pax-web.  
+6. Distributing a clustered container with Apache Karaf Cellar.  
+7. Providing a persistence layer with Apache Aries and OpenJPA.  
+8. Making a scalable persistence layer with Apache Cassandra. 
+9. Manage big data with Apache Hadoop. 
