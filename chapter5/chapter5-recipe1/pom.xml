@@ -7,14 +7,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>chapter4</artifactId>
+        <artifactId>chapter5</artifactId>
         <groupId>com.packt</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chapter4-recipe1</artifactId>
+    <artifactId>chapter5-recipe1</artifactId>
     <packaging>pom</packaging>
 
-    <name>Chapter 4 :: Recipe 1 ::</name>
+    <name>Chapter 5 :: Recipe 1 ::</name>
 
 </project>

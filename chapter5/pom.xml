@@ -12,17 +12,17 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chapter4</artifactId>
+    <artifactId>chapter5</artifactId>
     <packaging>pom</packaging>
 
-    <name>Chapter 4 :: Hosting web services with Apache CXF</name>
+    <name>Chapter 5 :: Hosting web services with Apache CXF</name>
     <description>Contains sample code and configurations.</description>
 
 
     <modules>
-        <module>chapter4-recipe1</module>
-        <module>chapter4-recipe2</module>
-        <module>chapter4-recipe3</module>
+        <module>chapter5-recipe1</module>
+        <module>chapter5-recipe2</module>
+        <module>chapter5-recipe3</module>
     </modules>
 
 </project>
