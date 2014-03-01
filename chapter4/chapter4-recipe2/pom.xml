@@ -2,14 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>chapter5</artifactId>
+        <artifactId>chapter4</artifactId>
         <groupId>com.packt</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chapter5-recipe2</artifactId>
+    <artifactId>chapter4-recipe2</artifactId>
     <packaging>pom</packaging>
 
-    <name>Chapter 5 :: Recipe 2 :: </name>
-    <description>Configuration of Pax Web</description>
+    <name>Chapter 4 :: Recipe 2 :: </name>
+    <description>Configure Pax modules deployed in Apache Karaf</description>
 </project>
