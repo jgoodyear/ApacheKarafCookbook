@@ -42,11 +42,11 @@ public class Activator implements BundleActivator {
 				httpContext, props);
 		
 		// and an servlet that cannot be accessed due to the above context
-        props = new Hashtable<String, String>();
+		props = new Hashtable<String, String>();
 		props.put( ExtenderConstants.PROPERTY_ALIAS, "/extfilter" );
-        props.put("servlet-name", "FilteredServlet");
-        props.put(ExtenderConstants.PROPERTY_HTTP_CONTEXT_ID, "shared");
-        registerService = context.registerService( Servlet.class, new HelloServlet(), props );
+		props.put("servlet-name", "FilteredServlet");
+		props.put(ExtenderConstants.PROPERTY_HTTP_CONTEXT_ID, "shared");
+		registerService = context.registerService( Servlet.class, new HelloServlet(), props );
 	}
 
 	public void stop(BundleContext context) throws Exception {

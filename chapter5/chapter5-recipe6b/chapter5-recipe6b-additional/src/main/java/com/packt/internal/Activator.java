@@ -29,21 +29,21 @@ public class Activator implements BundleActivator {
         WebContainer service = (WebContainer) context.getService(serviceReference);
 		
 		
-        Collection<ServiceReference<HttpContext>> serviceReferences = context.getServiceReferences(HttpContext.class, "(httpContext.id=shared)");
-
-        if (serviceReferences.size() > 1) {
+		Collection<ServiceReference<HttpContext>> serviceReferences = context.getServiceReferences(HttpContext.class, "(httpContext.id=shared)");
+		
+		if (serviceReferences.size() > 1) {
 			throw new RuntimeException("should only be one http shared context");
 		}
-        
-        HttpContext httpContext = context.getService(serviceReferences.iterator().next());
+		
+		HttpContext httpContext = context.getService(serviceReferences.iterator().next());
 
-        Dictionary<String, String> props;
-
-        props = new Hashtable<String, String>();
-        props.put("pattern", ".*");
-        props.put(ExtenderConstants.PROPERTY_HTTP_CONTEXT_ID, "shared");
-        
-        service.registerFilter(new ServletFilter(), new String[] { "/*" }, null, props, httpContext);
+		Dictionary<String, String> props;
+		
+		props = new Hashtable<String, String>();
+		props.put("pattern", ".*");
+		props.put(ExtenderConstants.PROPERTY_HTTP_CONTEXT_ID, "shared");
+		
+		service.registerFilter(new ServletFilter(), new String[] { "/*" }, null, props, httpContext);
         
 	}
 
