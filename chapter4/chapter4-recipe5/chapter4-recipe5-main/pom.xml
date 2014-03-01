@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter5-recipe6b</artifactId>
+		<artifactId>chapter4-recipe5</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe6b-main</artifactId>
+	<artifactId>chapter4-recipe5-main</artifactId>
 	<packaging>bundle</packaging>
 
 	<dependencies>

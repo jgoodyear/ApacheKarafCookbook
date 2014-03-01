@@ -2,13 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.packt</groupId>
-    <artifactId>chapter5</artifactId>
+    <artifactId>chapter4</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>chapter5-recipe6b</artifactId>
+  <artifactId>chapter4-recipe5</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>chapter5-recipe6b-main</module>
-  	<module>chapter5-recipe6b-additional</module>
+  	<module>chapter4-recipe5-main</module>
+  	<module>chapter4-recipe5-additional</module>
   </modules>
 </project>
