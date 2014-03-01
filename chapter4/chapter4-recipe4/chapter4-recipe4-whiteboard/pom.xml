@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter5-recipe4</artifactId>
+		<artifactId>chapter4-recipe4</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe4-whiteboard</artifactId>
+	<artifactId>chapter4-recipe4-whiteboard</artifactId>
 	<packaging>bundle</packaging>
 
 	<dependencies>
@@ -63,6 +63,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	<name>Chapter 5 :: Recipe 4 :: Whiteboard</name>
-	<description>Using the whiteboard extender only.</description>
+	<name>Chapter 4 :: Recipe 4 :: Whiteboard</name>
+	<description>Build a Http-Service with Whiteboard Pattern in Apache Karaf - Using the whiteboard extender only.</description>
 </project>

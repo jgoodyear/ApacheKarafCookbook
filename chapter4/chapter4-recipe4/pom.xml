@@ -3,16 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter5</artifactId>
+		<artifactId>chapter4</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter5-recipe4</artifactId>
+	<artifactId>chapter4-recipe4</artifactId>
 	<packaging>pom</packaging>
 	
 	<modules>
-		<module>chapter5-recipe4-whiteboard</module>
-		<module>chapter5-recipe4-blueprint</module>
+		<module>chapter4-recipe4-whiteboard</module>
+		<module>chapter4-recipe4-blueprint</module>
 	</modules>
-	<name>Chapter 5 :: Recipe 4 ::</name>
-	<description>Using the whiteboard extender</description>
+	<name>Chapter 4 :: Recipe 4 ::</name>
+	<description>Build a Http-Service with Whiteboard Pattern in Apache Karaf</description>
 </project>
