@@ -24,11 +24,15 @@
         <processorPath useClasspath="true" />
         <module name="chapter5-recipe1" />
         <module name="chapter5-recipe1 (1)" />
+        <module name="chapter5-recipe2" />
+        <module name="chapter5-recipe3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="chapter5-recipe1" target="1.6" />
       <module name="chapter5-recipe1 (1)" target="1.6" />
+      <module name="chapter5-recipe2" target="1.6" />
+      <module name="chapter5-recipe3" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

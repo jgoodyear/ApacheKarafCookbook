@@ -6,7 +6,7 @@ Bundle-Name: Chapter 5 :: Recipe 2 ::
 Created-By: Apache Maven Bundle Plugin
 Bundle-Version: 1.0.0.SNAPSHOT
 Build-Jdk: 1.7.0_45
-Bnd-LastModified: 1394198997515
+Bnd-LastModified: 1394504733499
 Bundle-ManifestVersion: 2
 Bundle-Description: Contains sample code and configurations.
 Import-Package: javax.ws.rs;version="[2.0,3)",org.osgi.service.bluepri

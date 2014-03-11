@@ -14,7 +14,6 @@
     <artifactId>chapter5-recipe2</artifactId>
 
     <name>Chapter 5 :: Recipe 2 ::</name>
-    <modelVersion>4.0.0</modelVersion>
     <groupId>com.packt</groupId>
     <packaging>bundle</packaging>
     <version>1.0.0-SNAPSHOT</version>
