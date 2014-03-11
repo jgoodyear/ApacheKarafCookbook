@@ -12,10 +12,13 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chapter5</artifactId>
     <packaging>pom</packaging>
-
-    <name>Chapter 5 :: Hosting a web server with Pax-web</name>
+    <artifactId>chapter5</artifactId>
+    <name>Chapter 5 :: Hosting web services with Apache CXF</name>
     <description>Contains sample code and configurations.</description>
+    <modules>
+        <module>chapter5-recipe1</module>
+        <module>chapter5-recipe2</module>
+    </modules>
 
 </project>
