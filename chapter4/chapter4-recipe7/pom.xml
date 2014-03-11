@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.packt</groupId>
+		<artifactId>chapter4</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>chapter4-recipe7</artifactId>
+	<name>Chapter 4 :: Recipe 7 ::</name>
+	<description>Build a enhanced web project for hosting in Apache Karaf</description>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>chapter4-recipe7-auth</module>
+		<module>chapter4-recipe7-ssl</module>
+	</modules>
+</project>

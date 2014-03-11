@@ -15,14 +15,18 @@
     <artifactId>chapter4</artifactId>
     <packaging>pom</packaging>
 
-    <name>Chapter 4 :: Hosting web services with Apache CXF</name>
+    <name>Chapter 4 :: Hosting a web server with Pax-web</name>
     <description>Contains sample code and configurations.</description>
 
-
     <modules>
-        <module>chapter4-recipe1</module>
-        <module>chapter4-recipe2</module>
-        <module>chapter4-recipe3</module>
+    	<module>chapter4-recipe2</module>
+    	<module>chapter4-recipe3</module>
+    	<module>chapter4-recipe4</module>
+    	<module>chapter4-recipe5</module>
+    	<module>chapter4-recipe8</module>
+    	<module>chapter4-recipe6</module>
+    	<module>chapter4-recipe7</module>
+    	<module>chapter4-recipe9</module>
+    	<module>chapter4-recipe6b</module>
     </modules>
-
 </project>

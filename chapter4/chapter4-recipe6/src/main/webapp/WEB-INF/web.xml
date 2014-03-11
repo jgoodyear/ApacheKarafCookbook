@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <display-name>Packt WAB Sample</display-name>
+
+    <servlet>
+        <servlet-name>hello.servlet</servlet-name>
+        <servlet-class>com.packt.HelloServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>test-jsp</servlet-name>
+        <jsp-file>/jsp/simple.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>test-jsp</servlet-name>
+        <url-pattern>/subjsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>hello.servlet</servlet-name>
+        <url-pattern>/example</url-pattern>
+    </servlet-mapping>
+
+    <filter-mapping>
+        <filter-name>filter</filter-name>
+        <url-pattern>/example/*</url-pattern>
+    </filter-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.html</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/uncaughtException.html</location>
+    </error-page>
+
+</web-app>

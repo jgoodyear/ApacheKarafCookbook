@@ -13,12 +13,23 @@
     </parent>
 
     <packaging>pom</packaging>
+<<<<<<< HEAD
     <artifactId>chapter5</artifactId>
+=======
+
+>>>>>>> d4ddcee20a7ae88b1896fba5863497829c3a4d74
     <name>Chapter 5 :: Hosting web services with Apache CXF</name>
     <description>Contains sample code and configurations.</description>
     <modules>
         <module>chapter5-recipe1</module>
         <module>chapter5-recipe2</module>
+    </modules>
+
+
+    <modules>
+        <module>chapter5-recipe1</module>
+        <module>chapter5-recipe2</module>
+        <module>chapter5-recipe3</module>
     </modules>
 
 </project>

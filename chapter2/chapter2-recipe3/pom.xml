@@ -16,5 +16,9 @@
     <packaging>pom</packaging>
 
     <name>Chapter 2 :: Recipe 3 ::</name>
+    
+    <modules>
+       <module>osgi</module>
+    </modules>
 
 </project>
