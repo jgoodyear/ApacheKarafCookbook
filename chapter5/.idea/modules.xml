@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chapter5.iml" filepath="$PROJECT_DIR$/chapter5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter5-recipe1/chapter5-recipe1.iml" filepath="$PROJECT_DIR$/chapter5-recipe1/chapter5-recipe1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter5-recipe2/chapter5-recipe2.iml" filepath="$PROJECT_DIR$/chapter5-recipe2/chapter5-recipe2.iml" />
+    </modules>
+  </component>
+</project>
+

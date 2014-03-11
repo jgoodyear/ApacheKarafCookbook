@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.cxf:cxf-rt-transports-http:3.0.0-milestone2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/3.0.0-milestone2/cxf-rt-transports-http-3.0.0-milestone2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/3.0.0-milestone2/cxf-rt-transports-http-3.0.0-milestone2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/3.0.0-milestone2/cxf-rt-transports-http-3.0.0-milestone2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

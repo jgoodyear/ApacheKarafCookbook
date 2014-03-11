@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Export-Package: com.example.test.cxf;uses:="javax.ws.rs"
+Built-By: heathkesler
+Tool: Bnd-1.15.0
+Bundle-Name: Chapter 5 :: Recipe 2 ::
+Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 1.0.0.SNAPSHOT
+Build-Jdk: 1.7.0_45
+Bnd-LastModified: 1394198997515
+Bundle-ManifestVersion: 2
+Bundle-Description: Contains sample code and configurations.
+Import-Package: javax.ws.rs;version="[2.0,3)",org.osgi.service.bluepri
+ nt;version="[1.0.0,2.0.0)"
+Bundle-SymbolicName: chapter5-recipe2
+
