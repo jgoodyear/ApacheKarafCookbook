@@ -2,7 +2,7 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              version="1.0">
 
-   <persistence-unit name="recipe" transaction-type="JTA">
+   <persistence-unit name="recipe" transaction-type="RESOURCE_LOCAL">
 
       <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
 
