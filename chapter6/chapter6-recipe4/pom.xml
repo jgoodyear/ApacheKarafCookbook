@@ -6,12 +6,12 @@
 		<artifactId>chapter6</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter6-recipe5</artifactId>
+	<artifactId>chapter6-recipe4</artifactId>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>chapter6-recipe5-producer</module>
-		<module>chapter6-recipe5-consumer</module>
-		<module>chapter6-recipe5-interface</module>
+		<module>chapter6-recipe4-producer</module>
+		<module>chapter6-recipe4-consumer</module>
+		<module>chapter6-recipe4-interface</module>
 	</modules>
 </project>
