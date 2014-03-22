@@ -1,0 +1,16 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+	xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0
+           http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+           http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0
+           http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0/blueprint-cm-1.0.0.xsd">
+
+	<!-- reference service -->
+	<reference id="messageService" interface="com.packt.MessageService" />
+	
+	<!-- Service Implementation -->
+	<bean class="com.packt.consumer.MessageConsumer" init-method="doRun">
+		<property name="messageService" ref="messageService"/>
+	</bean>
+	
+</blueprint>
