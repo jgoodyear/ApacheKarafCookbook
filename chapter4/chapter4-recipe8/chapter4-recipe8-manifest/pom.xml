@@ -8,7 +8,7 @@
 	</parent>
 	<artifactId>chapter4-recipe8-manifest</artifactId>
 	<packaging>bundle</packaging>
-	<description>Bind a web project to a specific host in Apache Karaf - Regular WAB with Manifest entry <description>
+	<description>Bind a web project to a specific host in Apache Karaf - Regular WAB with Manifest entry </description>
 	<name>Chapter 4 :: Recipe 8 :: Manifest</name>
 
 	<dependencies>

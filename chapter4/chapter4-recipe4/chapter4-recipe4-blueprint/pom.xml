@@ -8,6 +8,8 @@
 	</parent>
 	<artifactId>chapter4-recipe4-blueprint</artifactId>
 	<packaging>bundle</packaging>
+	<name>Chapter 4 :: Recipe 4 :: Blueprint</name>
+	<description>Build a Http-Service with Whiteboard Pattern in Apache Karaf - Using Blueprint</description>
 	
 	<dependencies>
 		<dependency>
@@ -61,6 +63,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<name>Chapter 4 :: Recipe 4 :: Blueprint</name>
-	<description>Build a Http-Service with Whiteboard Pattern in Apache Karaf - Using Blueprint<description>
 </project>
