@@ -20,6 +20,5 @@
 
     <modules>
     	<module>chapter6-recipe4</module>
-    	<module>chapter6-recipe3</module>
     </modules>
 </project>
