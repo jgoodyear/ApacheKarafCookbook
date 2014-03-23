@@ -10,8 +10,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>chapter6-recipe4-producer</module>
-		<module>chapter6-recipe4-consumer</module>
-		<module>chapter6-recipe4-interface</module>
+		<module>chapter6-recipe3-producer</module>
+		<module>chapter6-recipe3-consumer</module>
+		<module>chapter6-recipe3-interface</module>
 	</modules>
 </project>
