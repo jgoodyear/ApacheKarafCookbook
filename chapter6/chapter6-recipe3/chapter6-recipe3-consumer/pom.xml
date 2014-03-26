@@ -3,22 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.packt</groupId>
-		<artifactId>chapter4-recipe8</artifactId>
+		<artifactId>chapter6-recipe3</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>chapter4-recipe8-manifest</artifactId>
+	<artifactId>chapter6-recipe3-consumer</artifactId>
 	<packaging>bundle</packaging>
-	<description>Bind a web project to a specific host in Apache Karaf - Regular WAB with Manifest entry </description>
-	<name>Chapter 4 :: Recipe 8 :: Manifest</name>
 
 	<dependencies>
-		<!-- Provided dependencies -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
@@ -26,10 +17,10 @@
 			<version>4.3.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
+			<groupId>com.packt</groupId>
+			<artifactId>chapter6-recipe5-interface</artifactId>
+			<version>${project.version}</version>
 			<scope>provided</scope>
-			<version>4.3.1</version>
 		</dependency>
 	</dependencies>
 
@@ -38,14 +29,13 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.4.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<_wab>src/main/webapp</_wab>
-						<Web-ContextPath>packt-sample</Web-ContextPath>
-						<Web-Connectors>alternateConnector</Web-Connectors>
-						<Web-VirtualHosts>localhost</Web-VirtualHosts>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Version>${project.version}</Bundle-Version>
+						<Private-Package>com.packt.consumer</Private-Package>
+						<Import-Package>*</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>

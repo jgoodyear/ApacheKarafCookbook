@@ -18,4 +18,7 @@
     <name>Chapter 6 :: Distributing a clustered container with Apache Karaf Cellar</name>
     <description>Contains sample code and configurations.</description>
 
+    <modules>
+    	<module>chapter6-recipe3</module>
+    </modules>
 </project>

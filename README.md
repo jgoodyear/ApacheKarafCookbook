@@ -14,3 +14,10 @@ The samples in this project were written with JDK 1.7 and Maven 3.0.5.
 7. Providing a persistence layer with Apache Aries and OpenJPA.  
 8. Making a scalable persistence layer with Apache Cassandra. 
 9. Manage big data with Apache Hadoop. 
+
+
+Recipes tested on:
+ * Suse Enterprise Linux 11 sp3
+ * Ubuntu LTS 12.04 Server
+ * Windows Pro 7
+ * Mac OSX 10.9
