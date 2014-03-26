@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://reportDomain.cxf.test.example.com"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	targetNamespace="http://reportDomain.cxf.test.example.com">
+
+    <!-- Type definitions for input- and output parameters for webservice -->
+    <wsdl:types>
+        <xs:schema targetNamespace="http://reportDomain.cxf.test.example.com">
+            <xs:element name="inputReportDomain">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="domainId"/>
+                        <xs:element type="xs:string" name="domain"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="outputReportDomain">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="code"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+
+    <!-- Message definitions for input and output -->
+    <wsdl:message name="inputReportDomain">
+        <wsdl:part name="in" element="tns:inputReportDomain"/>
+    </wsdl:message>
+    <wsdl:message name="outputReportDomain">
+        <wsdl:part name="out" element="tns:outputReportDomain"/>
+    </wsdl:message>
+
+    <!-- Port (interface) definitions -->
+    <wsdl:portType name="ReportDomainEndpoint">
+        <wsdl:operation name="ReportDomain">
+            <wsdl:input message="tns:inputReportDomain"/>
+            <wsdl:output message="tns:outputReportDomain"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <!-- Port bindings to transports and encoding - HTTP, document literal encoding is used -->
+    <wsdl:binding name="ReportDomainBinding" type="tns:ReportDomainEndpoint">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="ReportDomain">
+            <soap:operation
+                    soapAction="http://reportDomain.cxf.test.example.com/ReportDomain"
+                    style="document"/>
+            <wsdl:input>
+                <soap:body parts="in" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="out" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <!-- Service definition -->
+    <wsdl:service name="ReportDomainEndpointService">
+        <wsdl:port name="ReportDomainService" binding="tns:ReportDomainBinding">
+            <soap:address location="http://localhost:9080/webservices/domain"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>
