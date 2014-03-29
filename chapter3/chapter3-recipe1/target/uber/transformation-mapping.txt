@@ -1,1 +1,0 @@
-transformer-0=org.fusesource.mvnplugins.uberize.transformer.ManifestEditor

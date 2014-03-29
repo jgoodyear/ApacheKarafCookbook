@@ -6,11 +6,11 @@
            xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.1.0">
 
     <!-- Define RecipeBookService Services, and expose them. --> 
-    <bean id="recipeBookService" class="com.packt.jpa.demo.dao.BookServiceDAOImpl">
+    <bean id="recipeBookService" class="com.packt.jpa.demo.dao.RecipeBookServiceDAOImpl">
         <jpa:context property="entityManager" unitname="recipe" />
     </bean>
 
-    <service ref="recipeBookService" interface="com.packt.jpa.demo.api.BookService" />
+    <service ref="recipeBookService" interface="com.packt.jpa.demo.api.RecipeBookService" />
 
     <bean id="dataSource" class="org.apache.derby.jdbc.ClientDataSource" >
        <property name="databaseName" value="demo"/>
