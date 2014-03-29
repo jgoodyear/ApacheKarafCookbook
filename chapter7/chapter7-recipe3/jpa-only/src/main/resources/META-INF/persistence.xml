@@ -18,7 +18,7 @@
          <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/demo;create=true"/>
          <!-- OpenJPA Properties -->
          <property name="openjpa.Multithreaded" value="true"/>
-         <property name="openjpa.TransactionMode" value="managed"/>
+         <property name="openjpa.TransactionMode" value="local"/>
          <property name="openjpa.ConnectionFactoryMode" value="managed"/>
          <property name="openjpa.LockManager" value="pessimistic(VersionCheckOnReadLock=true,VersionUpdateOnWriteLock=true)"/>
          <property name="openjpa.LockTimeout" value="30000"/>

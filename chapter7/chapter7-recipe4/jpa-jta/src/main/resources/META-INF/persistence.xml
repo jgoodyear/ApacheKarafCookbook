@@ -9,7 +9,7 @@
       <jta-data-source>osgi:service/javax.sql.XADataSource/(osgi.jndi.service.name=jdbc/demoxa)</jta-data-source>
       <non-jta-data-source>osgi:service/javax.sql.DataSource/(transactional=false)</non-jta-data-source>
 
-      <class>com.packt.jpa.demo.entity.Book</class>
+      <class>com.packt.jpa.demo.entity.Recipe</class>
       <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
 
