@@ -3,21 +3,23 @@
 <blueprint default-activation="eager"  
            xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.0.0"
            xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.1.0">
 
     <!-- Define RecipeBookService Services, and expose them. --> 
     <bean id="recipeBookService" class="com.packt.jpa.demo.dao.RecipeBookServiceDAOImpl">
-        <jpa:context property="entityManager" unitname="recipe" />
+        <jpa:unit property="entityManagerFactory" unitname="recipe" />
     </bean>
 
     <service ref="recipeBookService" interface="com.packt.jpa.demo.api.RecipeBookService" />
 
+    <!-- Standard DataSource -->
     <bean id="dataSource" class="org.apache.derby.jdbc.ClientDataSource" >
        <property name="databaseName" value="demo"/>
        <property name="createDatabase" value="create"/>
     </bean>
 
-    <service ref="dataSource" interface="javax.sql.DataSource">
+    <service id="demoDataSource" ref="dataSource" interface="javax.sql.DataSource">
         <service-properties>
             <entry key="osgi.jndi.service.name" value="jdbc/demo"/>
             <entry key="transactional" value="false"/> 
