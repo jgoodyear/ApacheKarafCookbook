@@ -16,7 +16,6 @@
     <name>Chapter 8 :: Recipe 1 :: Cassandra</name>
 
     <dependencies>
-
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>
@@ -32,26 +31,22 @@
             <artifactId>org.osgi.enterprise</artifactId>
             <version>5.0.0</version>
         </dependency>
-
+        <!-- Cassandra Driver -->
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-core</artifactId>
+            <version>2.0.1</version>
+        </dependency>
         <!-- custom felix gogo command -->
         <dependency>
             <groupId>org.apache.karaf.shell</groupId>
             <artifactId>org.apache.karaf.shell.console</artifactId>
             <version>3.0.0</version>
         </dependency>
-
-        <!-- Cassandra Driver -->
-
-        <dependency>
-            <groupId>com.datastax.cassandra</groupId>
-            <artifactId>cassandra-driver-core</artifactId>
-            <version>2.0.1</version>
-        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-
 
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -63,7 +58,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Activator>com.packt.cassandra.demo.Activator</Bundle-Activator>
                         <Export-Package>
-                            com.packt.jpa.demo.api.*
+                            com.packt.cassandra.demo.api.*
                         </Export-Package>
                         <Import-Package>
                             org.osgi.service.blueprint;resolution:=optional,
