@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<blueprint default-activation="eager"
+           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    >
+
+    <!-- Define RecipeBookService Services, and expose them. -->
+    <bean id="recipeBookService" class="com.packt.cassandra.demo.dao.RecipeBookServiceDAOImpl" init-method="init" destroy-method="destroy">
+
+    </bean>
+
+    <service ref="recipeBookService" interface="com.packt.cassandra.demo.api.RecipeBookService"/>
+
+    <!-- Apache Karaf Commands -->
+    <command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.1.0">
+        <command>
+            <action class="com.packt.cassandra.demo.commands.AddRecipe">
+                <property name="recipeBookService" ref="recipeBookService"/>
+            </action>
+        </command>
+        <command>
+            <action class="com.packt.cassandra.demo.commands.RemoveRecipe">
+                <property name="recipeBookService" ref="recipeBookService"/>
+            </action>
+        </command>
+        <command>
+            <action class="com.packt.cassandra.demo.commands.ListRecipes">
+                <property name="recipeBookService" ref="recipeBookService"/>
+            </action>
+        </command>
+    </command-bundle>
+
+</blueprint>
