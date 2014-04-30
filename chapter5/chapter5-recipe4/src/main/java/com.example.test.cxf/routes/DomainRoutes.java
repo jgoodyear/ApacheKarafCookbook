@@ -40,8 +40,6 @@ public class DomainRoutes extends RouteBuilder {
              .when().simple("${in.header.operationName} == 'ReportDomain'")
                 .convertBodyTo(InputReportDomain.class)
                 .to("log:dummy")
-                .setHeader(Exchange.FILE_NAME, constant("response-${date:now:yyyy-MM-dd-HHmmssSSS}"))
-                .wireTap("file://target/outbox")
                 .process(new Processor() {
                     public void process(Exchange exchange) throws Exception {
                         exchange.getIn().setBody(ok);
