@@ -21,7 +21,7 @@ public class AddRecipe extends OsgiCommandSupport {
 
     private RecipeBookService rbs;
 
-    public void setBookService(RecipeBookService rbs) {
+    public void setRecipeBookService(RecipeBookService rbs) {
         this.rbs = rbs;
     }
  

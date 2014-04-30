@@ -6,19 +6,18 @@
 
       <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
 
-      <non-jta-data-source>osgi:service/javax.sql.DataSource/(transactional=false)</non-jta-data-source>
+      <non-jta-data-source>osgi:service/javax.sql.DataSource/(osgi.jndi.service.name=jdbc/demo)</non-jta-data-source>
 
-      <class>com.packt.jpa.demo.entity.Book</class>
+      <class>com.packt.jpa.demo.entity.Recipe</class>
       <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
 
       <properties>
-         <!-- Database Properties -->
-         <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver.class"/>
-         <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/demo;create=true"/>
          <!-- OpenJPA Properties -->
+         <property name="openjpa.ConnectionDriverName" value="org.apache.derby.jdbc.ClientDriver.class"/>
+         <property name="openjpa.ConnectionURL" value="jdbc:derby://localhost:1527/demo;create=true"/>
          <property name="openjpa.Multithreaded" value="true"/>
-         <property name="openjpa.TransactionMode" value="managed"/>
+         <property name="openjpa.TransactionMode" value="local"/>
          <property name="openjpa.ConnectionFactoryMode" value="managed"/>
          <property name="openjpa.LockManager" value="pessimistic(VersionCheckOnReadLock=true,VersionUpdateOnWriteLock=true)"/>
          <property name="openjpa.LockTimeout" value="30000"/>

@@ -5,6 +5,9 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>chapter8-recipe1</module>
+    </modules>
 
     <parent>
         <artifactId>apache-karaf-cookbook</artifactId>

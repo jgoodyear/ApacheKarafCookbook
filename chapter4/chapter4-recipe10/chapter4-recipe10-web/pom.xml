@@ -86,7 +86,7 @@
 						</goals>
 						<configuration>
 							<versions>
-								<pax.cdi.osgi.version.clean>0.6.0</pax.cdi.osgi.version.clean>
+								<pax.cdi.osgi.version.clean>0.7.0</pax.cdi.osgi.version.clean>
 							</versions>
 						</configuration>
 					</execution>
