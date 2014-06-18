@@ -41,5 +41,27 @@ public class Recipe {
     public String toString() {
         return "" + this.title + " " + this.ingredients;
     }
+
+    // Sample equals method.
+    @Override
+    public boolean equals(final Object obj) {
+        if ((obj == null) || !(obj instanceof Recipe)) {
+            return false;
+        }
+        if (this == obj) return true;
+       
+        Recipe test = (Recipe) obj; 
+        return ((this.title == test.title) && (this.ingredients == test.ingredients)); 
+    }
+
+    // Sample hashCode function
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((this.title == null) ? 0 : this.title.hashCode());
+        result = prime * result + ((this.ingredients == null) ? 0 : this.ingredients.hashCode());
+        return result;
+    }
 }
 
