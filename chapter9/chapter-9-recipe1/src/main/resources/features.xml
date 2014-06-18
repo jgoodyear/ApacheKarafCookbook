@@ -1,0 +1,46 @@
+<features name="com.packt.chapter.nine-${project.version}">
+
+    <repository>mvn:org.apache.cxf.karaf/apache-cxf/3.0.0/xml/features</repository>
+
+    <feature name='xml-specs-api' version='${project.version}' resolver='(obr)' start-level='10'>
+        <bundle dependency='true'>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.stax-api-1.0/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxb-api-2.2/</bundle>
+        <bundle>mvn:org.codehaus.woodstox/stax2-api/</bundle>
+        <bundle>mvn:org.codehaus.woodstox/woodstox-core-asl/</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/</bundle>
+    </feature>
+
+    <feature name='hdfs2' version='${project.version}' resolver='(obr)' start-level='50'>
+        <feature>xml-specs-api</feature>
+        <feature>cxf-jaxrs</feature>
+        <bundle dependency='true'>mvn:commons-lang/commons-lang/2.6</bundle>
+        <bundle dependency='true'>mvn:com.google.guava/guava/16.0.1</bundle>
+        <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.guice/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jsch/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.paranamer/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.avro/1.7.3_1</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-compress/</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-math3/3.1.1</bundle>
+        <bundle dependency='true'>mvn:commons-cli/commons-cli/1.2</bundle>
+        <bundle dependency='true'>mvn:commons-configuration/commons-configuration/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-httpclient/</bundle>
+        <bundle dependency='true'>mvn:io.netty/netty/3.9.2.Final</bundle>
+        <bundle dependency='true'>mvn:org.codehaus.jackson/jackson-core-asl/1.9.12</bundle>
+        <bundle dependency='true'>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.12</bundle>
+        <bundle dependency="true">mvn:org.codehaus.jackson/jackson-jaxrs/1.9.12</bundle>
+        <bundle dependency="true">mvn:org.codehaus.jackson/jackson-xc/1.9.12</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.snappy-java</bundle>
+        <bundle dependency='true'>mvn:commons-codec/commons-codec/</bundle>
+        <bundle dependency='true'>mvn:commons-collections/commons-collections/3.2.1</bundle>
+        <bundle dependency='true'>mvn:commons-io/commons-io/</bundle>
+        <bundle dependency='true'>mvn:commons-net/commons-net/</bundle>
+        <bundle dependency='true'>mvn:org.apache.zookeeper/zookeeper/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlenc/0.52_1</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlresolver/</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.hadoop-client/</bundle>
+    </feature>
+
+</features>

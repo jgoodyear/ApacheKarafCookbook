@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<blueprint default-activation="eager"
+           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    >
+    <!-- Define RecipeBookService Services, and expose them. -->
+    <bean id="hdfsConfigService" class="com.packt.hadoop.demo.hdfs.HdfsConfigServiceImpl" init-method="init" destroy-method="destroy"/>
+
+    <service ref="hdfsConfigService" interface="com.packt.hadoop.demo.api.HdfsConfigService"/>
+
+    <!-- Apache Karaf Commands -->
+    <command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.1.0">
+        <command>
+            <action class="com.packt.hadoop.demo.commands.ReadConfigs">
+                <property name="hdfsConfigService" ref="hdfsConfigService"/>
+            </action>
+        </command>
+        <command>
+            <action class="com.packt.hadoop.demo.commands.StoreConfigs">
+                <property name="hdfsConfigService" ref="hdfsConfigService"/>
+            </action>
+        </command>
+
+    </command-bundle>
+</blueprint>
