@@ -212,7 +212,7 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>report-test</id>
+						<id>report</id>
 						<goals>
 							<goal>report-integration</goal>
 						</goals>

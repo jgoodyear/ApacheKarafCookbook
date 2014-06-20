@@ -69,7 +69,7 @@ public class TestKaraf {
 	}
 	
 	@Test
-	public void feauturesAvailable() throws Exception {
+	public void featuresAvailable() throws Exception {
 		assertTrue(featuresService.isInstalled(featuresService
 				.getFeature("eventadmin")));
 	}
