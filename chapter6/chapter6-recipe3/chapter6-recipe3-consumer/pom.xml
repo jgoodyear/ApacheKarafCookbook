@@ -18,7 +18,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.packt</groupId>
-			<artifactId>chapter6-recipe5-interface</artifactId>
+			<artifactId>chapter6-recipe3-interface</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
