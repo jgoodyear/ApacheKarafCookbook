@@ -9,7 +9,6 @@ import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.logLevel;
 import static org.ops4j.pax.tinybundles.core.TinyBundles.bundle;
 
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 
@@ -26,11 +25,15 @@ import org.ops4j.pax.exam.karaf.options.LogLevelOption.LogLevel;
 import org.ops4j.pax.exam.util.Filter;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 @RunWith(PaxExam.class)
 public class TestCamelInKaraf extends CamelTestSupport {
 
+	protected transient Logger log = LoggerFactory.getLogger(getClass());
+	
 	@Inject
 	protected FeaturesService featuresService;
 
@@ -50,7 +53,7 @@ public class TestCamelInKaraf extends CamelTestSupport {
 										.versionAsInProject()).useDeployFolder(false).karafVersion("3.0.1")
 						.unpackDirectory(new File("target/paxexam/unpack/")),
 	
-				logLevel(LogLevel.WARN),
+				logLevel(LogLevel.INFO),
 	
 				features(
 						maven().groupId("org.apache.camel.karaf").artifactId("apache-camel").type("xml")
@@ -59,7 +62,7 @@ public class TestCamelInKaraf extends CamelTestSupport {
 				keepRuntimeFolder(),
 				streamBundle(
 						bundle().add(HelloBean.class)
-								.add("OSGI-INF/blueprint/blueprint.xml",
+								.add("OSGI-INF/blueprint/camel-context.xml",
 										new File("src/main/resources/OSGI-INF/blueprint/blueprint.xml")
 												.toURL())
 								.set(Constants.BUNDLE_SYMBOLICNAME, "com.packt.camel-test")
@@ -74,19 +77,22 @@ public class TestCamelInKaraf extends CamelTestSupport {
 		// re-use the CamelContext between each test method in this class
 		return true;
 	}
-
+	
 	@Test
 	public void test() throws Exception {
+		log.info("running-test");
+		
 		assertTrue(featuresService.isInstalled(featuresService.getFeature("camel-core")));
 		assertTrue(featuresService.isInstalled(featuresService.getFeature("camel-blueprint")));
+		
+		doPreSetup();
 	
 		assertNotNull(testContext);
 		
 		MockEndpoint mockEndpoint = (MockEndpoint) testContext.getEndpoint("mock:result");
 		mockEndpoint.expectedMessageCount(1);
-		
-		assertMockEndpointsSatisfied(10000l, TimeUnit.MILLISECONDS);
-		
+
+		mockEndpoint.assertIsSatisfied(10000);
 	}
 
 }
