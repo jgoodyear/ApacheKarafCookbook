@@ -9,7 +9,7 @@
   
   
 	<properties>
-		<version.pax-exam>3.4.0</version.pax-exam>
+		<version.pax-exam>4.4.0</version.pax-exam>
 		<junit.version>4.11</junit.version>
 	</properties>
 
@@ -66,9 +66,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.ops4j.pax.exam</groupId>
-			<artifactId>pax-exam-testforge</artifactId>
-			<version>${version.pax-exam}</version>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-atinject_1.0_spec</artifactId>
+			<version>1.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -83,7 +83,7 @@
 		<dependency>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.framework</artifactId>
-			<version>4.0.3</version>
+			<version>4.4.1</version>
 			<scope>test</scope>
 		</dependency>
 
